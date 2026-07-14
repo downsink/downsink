@@ -22,7 +22,12 @@ jobs:
       - run: pnpm run build
       - run: pnpm --filter @downsink/core run test
 
-  e2e:
+  # Chromium and Firefox run on Linux for speed/cost. WebKit runs on macOS:
+  # Playwright's Linux WebKit build is the WebKitGTK/WPE port, which lags
+  # real Apple WebKit and does not implement OPFS (navigator.storage.getDirectory
+  # is simply absent there) — testing "WebKit" on Linux would validate the
+  # wrong engine for a library whose whole point is real Safari behavior.
+  e2e-linux:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -40,13 +45,42 @@ jobs:
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
-      - run: pnpm exec playwright install --with-deps chromium firefox webkit
+      - run: pnpm exec playwright install --with-deps chromium firefox
         working-directory: e2e
-      - run: pnpm exec playwright test
+      - run: pnpm exec playwright test --project=chromium --project=firefox
         working-directory: e2e
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
-          name: playwright-report
+          name: playwright-report-linux
+          path: e2e/playwright-report
+          retention-days: 7
+
+  e2e-webkit:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm --filter @downsink/core run build
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/Library/Caches/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}
+      - run: pnpm exec playwright install webkit
+        working-directory: e2e
+      - run: pnpm exec playwright test --project=webkit
+        working-directory: e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report-webkit
           path: e2e/playwright-report
           retention-days: 7
