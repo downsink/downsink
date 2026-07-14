@@ -1,0 +1,44 @@
+{
+  "name": "@downsink/core",
+  "version": "0.1.0",
+  "description": "Streaming downloads that fall to disk, not RAM: fetch → OPFS with typed progress and abort. Zero dependencies.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "test": "node --test --enable-source-maps './tests/**/*.test.ts'",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/downsink/downsink.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/downsink/downsink#readme",
+  "bugs": "https://github.com/downsink/downsink/issues",
+  "keywords": [
+    "download",
+    "streaming",
+    "opfs",
+    "filesystem",
+    "fetch",
+    "showSaveFilePicker",
+    "progress"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

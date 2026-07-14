@@ -1,0 +1,1659 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "linter": {
+    "rules": {
+      "a11y": {
+        "noHeaderScope": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "noNoninteractiveElementToInteractiveRole": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "noNoninteractiveTabindex": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "noPositiveTabindex": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "noRedundantRoles": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "useAnchorContent": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "useAriaPropsForRole": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "useButtonType": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "useGenericFontNames": {
+          // [CSS]
+          "level": "warn",
+        },
+        "useSemanticElements": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "useValidAnchor": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "useValidAriaProps": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "useValidAriaRole": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "useValidAriaValues": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "useValidAutocomplete": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "useValidLang": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+      },
+      "complexity": {
+        "noAdjacentSpacesInRegex": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noArguments": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noBannedTypes": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noCommaOperator": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noEmptyTypeParameters": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noExcessiveCognitiveComplexity": {
+          // [JavaScript]
+          "level": "info",
+        },
+        "noExcessiveLinesPerFunction": {
+          // [JavaScript]
+          "level": "off", // «Disabled because React component functions can get quite long.»
+        },
+        "noExcessiveNestedTestSuites": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noExtraBooleanCast": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noFlatMapIdentity": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noForEach": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noImplicitCoercions": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noImportantStyles": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noStaticOnlyClass": {
+          // [JavaScript]
+          "level": "off", // «Disabled because when treeshaking is not a concern, static only classes offer a convenient way of consuming APIs, and NestJS modules use annotated classes made of only static members.»
+        },
+        "noThisInStatic": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessCatch": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessCatchBinding": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessConstructor": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessContinue": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessEmptyExport": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessEscapeInRegex": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessFragments": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noUselessLabel": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessLoneBlockStatements": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessRename": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessStringConcat": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessStringRaw": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessSwitchCase": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessTernary": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessThisAlias": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessTypeConstraint": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noUselessUndefined": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessUndefinedInitialization": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noVoid": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useArrowFunction": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useDateNow": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useFlatMap": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useIndexOf": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useLiteralKeys": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useMaxParams": {
+          // [JavaScript]
+          "level": "off", // «Disabled because NestJS services constructors can have long lists of injected parameters.»
+        },
+        "useNumericLiterals": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useOptionalChain": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useRegexLiterals": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useSimpleNumberKeys": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useSimplifiedLogicExpression": {
+          // [JavaScript]
+          "level": "off", // «Disabled because '!a || !b' is more readable than suggested '!(a && b)'.»
+        },
+        "useWhile": {
+          // [JavaScript]
+          "level": "warn",
+        },
+      },
+      "correctness": {
+        "noChildrenProp": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noConstAssign": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noConstantCondition": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noConstantMathMinMaxClamp": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noConstructorReturn": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noEmptyCharacterClassInRegex": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noEmptyPattern": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noGlobalDirnameFilename": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noGlobalObjectCalls": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noInnerDeclarations": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noInvalidBuiltinInstantiation": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noInvalidConstructorSuper": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noInvalidDirectionInLinearGradient": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noInvalidGridAreas": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noInvalidPositionAtImportRule": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noInvalidUseBeforeDeclaration": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noMissingVarFunction": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noNestedComponentDefinitions": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noNonoctalDecimalEscape": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noPrecisionLoss": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noPrivateImports": {
+          // [JavaScript] WARNING! Activates the 'project' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'project' domain, which is slow as hell. We have TypeScript checks for this.»
+        },
+        "noProcessGlobal": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noReactPropAssignments": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noRenderReturnValue": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noRestrictedElements": {
+          // [JSX]
+          "level": "off", // «Disabled because we have no forbidden elements.»
+        },
+        "noSelfAssign": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noSetterReturn": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noStringCaseMismatch": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noSwitchDeclarations": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUndeclaredDependencies": {
+          // [JavaScript] WARNING! Activates the 'project' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'project' domain, which is slow as hell. We have TypeScript checks for this.»
+        },
+        "noUndeclaredVariables": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUnknownFunction": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noUnknownMediaFeatureName": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noUnknownProperty": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noUnknownPseudoClass": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noUnknownPseudoElement": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noUnknownTypeSelector": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noUnknownUnit": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noUnmatchableAnbSelector": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noUnreachable": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUnreachableSuper": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUnresolvedImports": {
+          // [JavaScript] WARNING! Activates the 'project' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'project' domain, which is slow as hell. We have TypeScript checks for this.»
+        },
+        "noUnsafeFinally": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUnsafeOptionalChaining": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUnusedFunctionParameters": {
+          // [JavaScript]
+          "level": "off", // Disabled because unused parameters can be used as documentation or placeholders for later implementation.»
+        },
+        "noUnusedImports": {
+          // [JavaScript]
+          "level": "error",
+          "fix": "safe",
+        },
+        "noUnusedLabels": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUnusedPrivateClassMembers": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUnusedVariables": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noVoidElementsWithChildren": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noVoidTypeReturn": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "useExhaustiveDependencies": {
+          // [JSX]
+          "level": "info",
+        },
+        "useHookAtTopLevel": {
+          // [JSX]
+          "level": "off", // «Disabled because recognizes every function starting with 'use' as a React hook.»
+        },
+        "useImageSize": {
+          // [JSX]
+          "level": "off", // «Disabled because there are valid reasons for not declaring <img> width and height attributes.»
+        },
+        "useImportExtensions": {
+          // [JavaScript] WARNING! Activates the 'project' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'project' domain, which is slow as hell. We have TypeScript checks for this.»
+        },
+        "useIsNan": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useJsonImportAttributes": {
+          // [JavaScript] WARNING! Activates the 'project' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'project' domain, which is slow as hell. We have TypeScript checks for this.»
+        },
+        "useJsxKeyInIterable": {
+          // [JSX]
+          "level": "warn",
+        },
+        "useParseIntRadix": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useSingleJsDocAsterisk": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useUniqueElementIds": {
+          // [JSX]
+          "level": "off", // «Disabled because there are valid cases for using static strings as ids instead of dynamically generated ones.»
+        },
+        "useValidForDirection": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useValidTypeof": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useYield": {
+          // [JavaScript]
+          "level": "warn",
+        },
+      },
+      "nursery": {
+        "noBaseToString": {
+          // [JavaScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell.»
+        },
+        "noComponentHookFactories": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noConditionalExpect": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noContinue": {
+          // [JavaScript]
+          "level": "off", // «Disabled because there are valid use case for continue inside loops. For example when used as guard.»
+        },
+        "noDeprecatedMediaType": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noDivRegex": {
+          // [JavaScript]
+          "level": "off", // «Disabled because it is questionable.»
+        },
+        "noDuplicateAttributes": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "noDuplicateSelectors": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noDuplicatedSpreadProps": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noDuplicateEnumValues": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noEqualsToNull": {
+          // [JavaScript]
+          "level": "error",
+        },
+        "noEmptyObjectKeys": {
+          // [JSON]
+          "level": "warn",
+        },
+        "noExcessiveClassesPerFile": {
+          // [JavaScript]
+          "level": "off", // «Disabled because we don't follow the pattern of files exporting only one thing.»
+        },
+        "noExcessiveLinesPerFile": {
+          // [CSS,JavaScript]
+          "level": "off", // «Disabled because there is nothing wrong with long files, it's not worse than a lot of small files. For example every React component file has one associated .css file that can get quite long.»
+        },
+        "noExcessiveNestedCallbacks": {
+          // [JavaScript]
+          "level": "warn",
+          "options": {
+            "max": 3,
+          },
+        },
+        "noExcessiveSelectorClasses": {
+          // [CSS]
+          "level": "warn",
+          "options": {
+            "maxClasses": 3,
+          },
+        },
+        "noFloatingClasses": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noFloatingPromises": {
+          // [JavaScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell.»
+        },
+        "noForIn": {
+          // [JavaScript]
+          "level": "off", // «Disabled because there are valid use case for iterating with for-in over objects.»
+        },
+        "noHexColors": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noImpliedEval": {
+          // [JavaScript]
+          "level": "error",
+        },
+        "noIdenticalTestTitle": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noIncrementDecrement": {
+          // [JavaScript]
+          "level": "warn",
+          "options": {
+            "allowForLoopAfterthoughts": true,
+          },
+        },
+        "noInlineStyles": {
+          // [HTML,JSX]
+          "level": "off", // «Disabled because we use inline styles when passing CSS custom properties (variables).»
+        },
+        "noJsxLeakedDollar": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noJsxNamespace": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noJsxPropsBind": {
+          // [JSX]
+          "level": "off", // «Disabled because we don't need to optimize every prop and because React Compiler makes this check obsolete.»
+        },
+        "noLeakedRender": {
+          // [JSX]
+          "level": "off", // «Disabled because it does not understand types and it complains even for boolean variables.»
+        },
+        "noLoopFunc": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noMisleadingReturnType": {
+          // [TypeScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell. We have TypeScript checks for this.»
+        },
+        "noMisusedPromises": {
+          // [JavaScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell. We have TypeScript checks for this.»
+        },
+        "noMultiAssign": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noMultiStr": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noNestedPromises": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noParametersOnlyUsedInRecursion": {
+          // [JavaScript]
+          "level": "off", // «Disabled because detects as unused even used parameters.»
+        },
+        "noProto": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noReactStringRefs": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noRedundantDefaultExport": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noReturnAssign": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noScriptUrl": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "noShadow": {
+          // [JavaScript]
+          "level": "info",
+        },
+        "noSyncScripts": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "noTernary": {
+          // [JavaScript]
+          "level": "off", // «Disabled because there are valid use cases for simple ternary operator usage.»
+        },
+        "noTopLevelLiterals": {
+          // [JSON]
+          "level": "warn",
+        },
+        "noUndeclaredEnvVars": {
+          // [JavaScript]
+          "level": "off", // «Disabled because it requires to duplicate environment variables lists. We use TypeScript for this.»
+        },
+        "noUnknownAttribute": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noUnnecessaryConditions": {
+          // [JavaScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell. We have TypeScript checks for this.»
+        },
+        "noUnnecessaryTemplateExpression": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUnsafePlusOperands": {
+          // [JavaScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell. We have TypeScript checks for this.»
+        },
+        "noUntrustedLicenses": {
+          // [JSON] WARNING! Activates the 'project' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'project' domain, which is slow as hell.»
+        },
+        "noUselessTypeConversion": {
+          // [TypeScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell.»
+        },
+        "noUselessReturn": {
+          // [JavaScript]
+          "level": "off", // «Disabled because it does not play well with TypeScript which raises "Not all code paths return a value.ts(7030)".»
+        },
+        "useArraySome": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useArraySortCompare": {
+          // [JavaScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell.»
+        },
+        "useAwaitThenable": {
+          // [JavaScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell. We have TypeScript checks for this.»
+        },
+        "useBaseline": {
+          // [CSS]
+          "level": "info",
+          "options": {
+            "available": "newly",
+          },
+        },
+        "useConsistentEnumValueType": {
+          // [TypeScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell.»
+        },
+        "useConsistentMethodSignatures": {
+          // [TypeScript]
+          "level": "off", // «Disabled because it is too restrictive.»
+        },
+        "useConsistentTestIt": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useDestructuring": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useDisposables": {
+          // [TypeScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell.»
+        },
+        "useDomNodeTextContent": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useDomQuerySelector": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useErrorCause": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useExhaustiveSwitchCases": {
+          // [JavaScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell. We have TypeScript checks for this.»
+        },
+        "useExpect": {
+          // [JavaScript]
+          "level": "off", // «Disabled because we don't use expect() for assertions, but NodeJS assertions.»
+        },
+        "useExplicitReturnType": {
+          // [TypeScript]
+          "level": "off", // «Disabled because it is too restrictive for apps, and where needed in libs we have TypeScript checks ('isolatedDeclarations') for this.»
+        },
+        "useExplicitType": {
+          // [TypeScript]
+          "level": "off", // «Disabled because it is too restrictive for apps, and where needed in libs we have TypeScript checks ('isolatedDeclarations') for this.»
+        },
+        "useFind": {
+          // [JavaScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell. We have TypeScript checks for this.»
+        },
+        "useGlobalThis": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useIframeSandbox": {
+          // [HTML,JSX]
+          "level": "warn",
+        },
+        "useImportsFirst": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useMathMinMax": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useNamedCaptureGroup": {
+          // [JavaScript]
+          "level": "off", // «Disabled because named capture groups decreases readability of simple RegExp with few capturing groups.»
+        },
+        "useNullishCoalescing": {
+          // [JavaScript,TypeScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell.»
+        },
+        "useReduceTypeParameter": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "useRegexpExec": {
+          // [JavaScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell.»
+        },
+        "useRegexpTest": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useRequiredScripts": {
+          // [JSON]
+          "level": "off", // «Disabled because we don't have a set of common scripts for package.json files.»
+        },
+        "useSortedClasses": {
+          // [JavaScript]
+          "level": "off", // «Disabled because we sort by relevance. For classes influencing layout before those influencing color.»
+        },
+        "useSpread": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useStringStartsEndsWith": {
+          // [JavaScript] WARNING! Activates the 'types' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'types' domain, which is slow as hell.»
+        },
+        "useTestHooksInOrder": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useTestHooksOnTop": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useThisInClassMethods": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useUnicodeRegex": {
+          // [JavaScript]
+          "level": "off", // «Disabled because we don't treat unicode matching.»
+        },
+        "useVarsOnTop": {
+          // [JavaScript]
+          "level": "warn",
+        },
+      },
+      "performance": {
+        "noAccumulatingSpread": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noAwaitInLoops": {
+          // [JavaScript]
+          "level": "info",
+        },
+        "noBarrelFile": {
+          // [JavaScript]
+          "level": "off", // «Disabled because there are valid cases for barrel files. Although they should be avoided as much as possible.»
+        },
+        "noDelete": {
+          // [JavaScript]
+          "level": "info",
+        },
+        "noDynamicNamespaceImportAccess": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noNamespaceImport": {
+          // [JavaScript]
+          "level": "off", // «Disabled because there are valid cases for importing libraries as namespaces. For example with libraries without a default export, with barrel imports and where treeshaking is not needed.»
+        },
+        "noReExportAll": {
+          // [JavaScript]
+          "level": "off", // «Disabled because there are valid cases for re-exporting inside barrel files. Although they should be avoided as much as possible.»
+        },
+        "useTopLevelRegex": {
+          // [JavaScript]
+          "level": "info",
+        },
+      },
+      "security": {
+        "noBlankTarget": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noDangerouslySetInnerHtml": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noDangerouslySetInnerHtmlWithChildren": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noGlobalEval": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noSecrets": {
+          // [JavaScript]
+          "level": "off", // «Disabled because of false positives.»
+        },
+      },
+      "style": {
+        "noCommonJs": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noDefaultExport": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noDescendingSpecificity": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noDoneCallback": {
+          // [JavaScript]
+          "level": "off", // «Disabled because identifies as done() callback the context argument.»
+        },
+        "noEnum": {
+          // [TypeScript]
+          "level": "off", // «Disabled because we make heavy use of TypeScript enums.»
+        },
+        "noExportedImports": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noImplicitBoolean": {
+          // [JSX]
+          "level": "off", // «Disabled because it's a convenient feature with no side effects.»
+        },
+        "noInferrableTypes": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noJsxLiterals": {
+          // [JSX]
+          "level": "off", // «Disabled because unfortunately our current translation system relies on literal strings.»
+          "options": {
+            "noStrings": true,
+          },
+        },
+        "noMagicNumbers": {
+          // [JavaScript]
+          "level": "off", // «Disabled because it complains about not magical at all expressions like '6 * Minutes'.»
+        },
+        "noNamespace": {
+          // [TypeScript]
+          "level": "off", // «Disabled because we make use of types namespaces for grouping types.»
+        },
+        "noNegationElse": {
+          // [JavaScript]
+          "level": "off", // «Disabled because with ternary operator if block is used for the expected value and else block is used for the fallback value; we don't want them to be flipped.»
+        },
+        "noNestedTernary": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noNonNullAssertion": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noParameterAssign": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noParameterProperties": {
+          // [TypeScript]
+          "level": "off", // «Disabled because unfortunately we make heavy use of constructor parameter properties due to NestJS.»
+        },
+        "noProcessEnv": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noRestrictedGlobals": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noRestrictedImports": {
+          // [JavaScript]
+          "level": "off", // «Disabled because we don't have restricted imports at the moment.»
+        },
+        "noRestrictedTypes": {
+          // [TypeScript]
+          "level": "off", // «Disabled because we don't have restricted type imports at the moment.»
+        },
+        "noShoutyConstants": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noSubstr": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUnusedTemplateLiteral": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessElse": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noValueAtRule": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noYodaExpression": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useArrayLiterals": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useAsConstAssertion": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "useAtIndex": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useBlockStatements": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useCollapsedElseIf": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useCollapsedIf": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useComponentExportOnlyModules": {
+          // [JSX]
+          "level": "off", // «Disabled because when structuring modules as APIs exporting React components and APIs, the Hot Module Fast Refresh does not matter.»
+        },
+        "useConsistentArrayType": {
+          // [TypeScript]
+          "level": "warn",
+          "options": {
+            "syntax": "generic",
+          },
+        },
+        "useConsistentArrowReturn": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useConsistentBuiltinInstantiation": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useConsistentCurlyBraces": {
+          // [JSX]
+          "level": "warn",
+        },
+        "useConsistentMemberAccessibility": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "useConsistentObjectDefinitions": {
+          // [JavaScript]
+          "level": "off", // «Disabled because even if explicit form should be preferred, shorthand form can be very handy in some circumstances.»
+        },
+        "useConsistentTypeDefinitions": {
+          // [TypeScript]
+          "level": "off", // «Disabled because there are legitimate arguments for defining structures as types or as interfaces.»
+        },
+        "useConst": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useDefaultParameterLast": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useDefaultSwitchClause": {
+          // [JavaScript]
+          "level": "off", // «Disabled because the default case is not always needed.»
+        },
+        "useEnumInitializers": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "useExplicitLengthCheck": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useExponentiationOperator": {
+          // [JavaScript]
+          "level": "off", // «Disabled because the exponential operator is not always more readable than the function.»
+        },
+        "useExportsLast": {
+          // [JavaScript]
+          "level": "off", // «Disabled because we prefer to declare exports as high as possible in the file, improving discoverability of public apis.»
+        },
+        "useExportType": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "useFilenamingConvention": {
+          // [JavaScript]
+          "level": "warn",
+          "options": {
+            "filenameCases": [
+              "kebab-case",
+              "PascalCase",
+              "snake_case",
+            ],
+          },
+        },
+        "useForOf": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useFragmentSyntax": {
+          // [JSX]
+          "level": "warn",
+        },
+        "useGroupedAccessorPairs": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useImportType": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "useLiteralEnumMembers": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "useNamingConvention": {
+          // [JavaScript]
+          "level": "info",
+          "options": {
+            "conventions": [
+              {
+                "selector": {
+                  "kind": "objectLiteralMember",
+                },
+                "formats": [
+                  "camelCase",
+                  "PascalCase",
+                ],
+              },
+              {
+                "selector": {
+                  "kind": "typeMember",
+                },
+                "formats": [
+                  "camelCase",
+                  "PascalCase",
+                ],
+              },
+            ],
+            "strictCase": false,
+          },
+        },
+        "useNodeAssertStrict": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useNodejsImportProtocol": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useNumberNamespace": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useNumericSeparators": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useObjectSpread": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useReactFunctionComponents": {
+          // [JSX]
+          "level": "warn",
+        },
+        "useReadonlyClassProperties": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "useSelfClosingElements": {
+          // [JSX]
+          "level": "warn",
+        },
+        "useShorthandAssign": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useShorthandFunctionType": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "useSingleVarDeclarator": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useSymbolDescription": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useTemplate": {
+          // [JavaScript]
+          "level": "off", // «Disabled because strings concatenation can be more readable (in certain cases) than template interpolation.»
+        },
+        "useThrowNewError": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useThrowOnlyError": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useTrimStartEnd": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useUnifiedTypeSignatures": {
+          // [TypeScript]
+          "level": "warn",
+        },
+      },
+      "suspicious": {
+        "noAlert": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noApproximativeNumericConstant": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noArrayIndexKey": {
+          // [JSX]
+          "level": "off", // «Disabled because it is perfectly fine to use array indexes as React keys, when you know what you are doing.»
+        },
+        "noAssignInExpressions": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noAsyncPromiseExecutor": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noBiomeFirstException": {
+          // [JSON]
+          "level": "warn",
+        },
+        "noBitwiseOperators": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noCatchAssign": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noClassAssign": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noCommentText": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noCompareNegZero": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noConfusingLabels": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noConfusingVoidType": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noConsole": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noConstantBinaryExpressions": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noConstEnum": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noControlCharactersInRegex": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noDebugger": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noDeprecatedImports": {
+          // [TypeScript] WARNING! Activates the 'project' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'project' domain, which is slow as hell.»
+        },
+        "noDocumentCookie": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noDoubleEquals": {
+          // [JavaScript]
+          "level": "error",
+          "options": {
+            "ignoreNull": false,
+          },
+        },
+        "noDuplicateAtImportRules": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noDuplicateCase": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noDuplicateClassMembers": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noDuplicateCustomProperties": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noDuplicateDependencies": {
+          // [JSON]
+          "level": "warn",
+        },
+        "noDuplicateElseIf": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noDuplicateFontNames": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noDuplicateJsxProps": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noDuplicateObjectKeys": {
+          // [JavaScript,JSON]
+          "level": "warn",
+        },
+        "noDuplicateParameters": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noDuplicateProperties": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noDuplicateSelectorsKeyframeBlock": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noDuplicateTestHooks": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noEmptyBlock": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noEmptyBlockStatements": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noEmptyInterface": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noEmptySource": {
+          // [CSS,JavaScript]
+          "level": "off", // «Disabled because every React component file should always have a .css associated file, empty or not.»
+        },
+        "noEvolvingTypes": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noExplicitAny": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noExportsInTest": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noExtraNonNullAssertion": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noFallthroughSwitchClause": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noFocusedTests": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noFunctionAssign": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noGlobalAssign": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noGlobalIsFinite": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noGlobalIsNan": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noImplicitAnyLet": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noImportAssign": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noImportantInKeyframe": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noImportCycles": {
+          // [JavaScript] WARNING! Activates the 'project' domain (which is slow as hell).
+          "level": "off", // «Disabled because activates the 'project' domain, which is slow as hell.»
+          "options": {
+            "ignoreTypes": false,
+          },
+        },
+        "noIrregularWhitespace": {
+          // [CSS,JavaScript]
+          "level": "warn",
+        },
+        "noLabelVar": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noMisleadingCharacterClass": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noMisleadingInstantiator": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noMisplacedAssertion": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noMisrefactoredShorthandAssign": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noNonNullAssertedOptionalChain": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noOctalEscape": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noPrototypeBuiltins": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noQuickfixBiome": {
+          // [JSON]
+          "level": "warn",
+        },
+        "noReactForwardRef": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noRedeclare": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noRedundantUseStrict": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noSelfCompare": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noShadowRestrictedNames": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noShorthandPropertyOverrides": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noSkippedTests": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noSparseArray": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noSuspiciousSemicolonInJsx": {
+          // [JSX]
+          "level": "warn",
+        },
+        "noTemplateCurlyInString": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noThenProperty": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noTsIgnore": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noUnassignedVariables": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUnknownAtRules": {
+          // [CSS]
+          "level": "warn",
+        },
+        "noUnsafeDeclarationMerging": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "noUnsafeNegation": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUnusedExpressions": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noUselessEscapeInString": {
+          // [CSS,JavaScript]
+          "level": "warn",
+        },
+        "noUselessRegexBackrefs": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noVar": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "noWith": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useAdjacentOverloadSignatures": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "useAwait": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useBiomeIgnoreFolder": {
+          // [JSON]
+          "level": "warn",
+        },
+        "useDefaultSwitchClauseLast": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useErrorMessage": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useGetterReturn": {
+          // [JavaScript]
+          "level": "off", // «Disabled because it does not allow returning a legitimate undefined value.»
+        },
+        "useGoogleFontDisplay": {
+          // [JSX]
+          "level": "warn",
+        },
+        "useGuardForIn": {
+          // [JavaScript]
+          "level": "off", // «Disabled because it is a legacy check not applicable in our context.»
+        },
+        "useIsArray": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useIterableCallbackReturn": {
+          // [JavaScript]
+          // "level": "warn",
+          "level": "off", // «Disabled because of this issue https://github.com/biomejs/biome/issues/9445.»
+        },
+        "useNamespaceKeyword": {
+          // [TypeScript]
+          "level": "warn",
+        },
+        "useNumberToFixedDigitsArgument": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useStaticResponseMethods": {
+          // [JavaScript]
+          "level": "warn",
+        },
+        "useStrictMode": {
+          // [JavaScript]
+          "level": "warn",
+        },
+      },
+    },
+  },
+}

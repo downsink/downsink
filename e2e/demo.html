@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>downsink — manual demo</title>
+    <style>
+      :root {
+        --ink: #0d2230; --paper: #f3f7f8; --panel: #fff; --line: #d5e2e6;
+        --muted: #5a7482; --accent: #1798a8; --stream: #35c4d4; --bad: #b0455a;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #dcecef; --paper: #0a1a21; --panel: #0f2530; --line: #1e3a46;
+          --muted: #7fa0ac; --accent: #35c4d4; --bad: #e08296;
+        }
+      }
+      body {
+        margin: 0; background: var(--paper); color: var(--ink);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        display: grid; place-items: center; min-height: 100vh;
+      }
+      main { width: min(560px, calc(100vw - 48px)); }
+      h1 { font-family: ui-monospace, Menlo, monospace; font-size: 28px; letter-spacing: -0.03em; }
+      h1 .sink { color: var(--stream); }
+      .panel { background: var(--panel); border: 1px solid var(--line); padding: 24px; display: grid; gap: 16px; }
+      .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+      label { font-size: 13px; color: var(--muted); }
+      select, button {
+        font: inherit; padding: 8px 14px; border: 1px solid var(--line);
+        background: var(--panel); color: var(--ink); border-radius: 4px;
+      }
+      button.primary { background: var(--accent); border-color: var(--accent); color: #fff; cursor: pointer; }
+      button.ghost { cursor: pointer; }
+      button:disabled { opacity: 0.45; cursor: default; }
+      .bar { height: 10px; background: var(--line); border-radius: 5px; overflow: hidden; }
+      .bar > div { height: 100%; width: 0%; background: var(--stream); transition: width 0.15s linear; }
+      .bar.indeterminate > div { width: 30%; animation: slide 1.2s infinite linear; }
+      @keyframes slide { from { margin-left: -30%; } to { margin-left: 100%; } }
+      .stats { font-family: ui-monospace, Menlo, monospace; font-size: 13px; color: var(--muted); min-height: 1.4em; }
+      .stats.error { color: var(--bad); }
+      .support { font-size: 12.5px; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>down<span class="sink">sink</span> demo</h1>
+      <div class="panel">
+        <div class="row">
+          <label>Scenario
+            <select id="scenario">
+              <option value="/file?size=8388608">8 MB</option>
+              <option value="/file?size=134217728">128 MB</option>
+              <option value="/file?size=2147483648">2 GB (oltre il limite blob)</option>
+              <option value="/file?size=33554432&delay=200">32 MB lento (per provare abort)</option>
+              <option value="/gzip">gzip (progress indeterminato)</option>
+              <option value="/error">HTTP 500</option>
+            </select>
+          </label>
+          <label>Mode
+            <select id="mode">
+              <option value="opfs">opfs (default)</option>
+              <option value="picker">picker</option>
+              <option value="auto">auto</option>
+            </select>
+          </label>
+        </div>
+        <div class="row">
+          <button class="primary" id="start">Download</button>
+          <button class="ghost" id="abort" disabled>Abort</button>
+        </div>
+        <div class="bar" id="bar"><div id="fill"></div></div>
+        <div class="stats" id="stats">idle</div>
+        <div class="support" id="support"></div>
+      </div>
+    </main>
+    <script type="module">
+      import {download, support} from '/core/index.js'
+
+      const $ = id => document.getElementById(id)
+      const caps = support()
+      $('support').textContent = `support(): opfs=${caps.opfs} picker=${caps.picker} — ${navigator.userAgent}`
+
+      const fmt = n => (n >= 1_048_576 ? `${(n / 1_048_576).toFixed(1)} MB` : `${(n / 1024).toFixed(0)} KB`)
+      let handle = null
+      let t0 = 0
+
+      $('start').onclick = async () => {
+        $('start').disabled = true
+        $('abort').disabled = false
+        $('stats').className = 'stats'
+        $('bar').classList.remove('indeterminate')
+        $('fill').style.width = '0%'
+        t0 = performance.now()
+
+        handle = download($('scenario').value, {
+          mode: $('mode').value,
+          filename: 'downsink-demo.bin',
+          onProgress: ({receivedBytes, totalBytes}) => {
+            const secs = (performance.now() - t0) / 1000
+            const speed = fmt(receivedBytes / secs) + '/s'
+            if (totalBytes === null) {
+              $('bar').classList.add('indeterminate')
+              $('stats').textContent = `${fmt(receivedBytes)} — totale sconosciuto — ${speed}`
+            } else {
+              const pct = ((receivedBytes / totalBytes) * 100).toFixed(1)
+              $('fill').style.width = pct + '%'
+              $('stats').textContent = `${fmt(receivedBytes)} / ${fmt(totalBytes)} (${pct}%) — ${speed}`
+            }
+          },
+        })
+
+        try {
+          const result = await handle.done
+          $('fill').style.width = '100%'
+          $('bar').classList.remove('indeterminate')
+          $('stats').textContent = `✓ ${result.filename} — ${fmt(result.receivedBytes)} in ${((performance.now() - t0) / 1000).toFixed(1)}s`
+        } catch (err) {
+          $('bar').classList.remove('indeterminate')
+          $('stats').className = 'stats error'
+          $('stats').textContent = err.name === 'AbortError' ? '✕ abortito' : `✕ ${err.name}: ${err.message}`
+        } finally {
+          $('start').disabled = false
+          $('abort').disabled = true
+        }
+      }
+
+      $('abort').onclick = () => handle?.abort()
+    </script>
+  </body>
+</html>

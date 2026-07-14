@@ -1,0 +1,10 @@
+<svg width="128" height="128" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .basin { stroke: #0d2230; }
+    @media (prefers-color-scheme: dark) {
+      .basin { stroke: #e8f4f6; }
+    }
+  </style>
+  <path d="M32 6 v22 m0 0 l-9 -9 m9 9 l9 -9" stroke="#35c4d4" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="basin" d="M14 38 v10 a8 8 0 0 0 8 8 h20 a8 8 0 0 0 8 -8 v-10" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+</svg>

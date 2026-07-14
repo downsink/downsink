@@ -1,0 +1,142 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "root": true,
+  "extends": [
+    "./biome-linter-rules.jsonc",
+  ],
+  "vcs": {
+    "defaultBranch": "main",
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+  },
+  "files": {
+    "includes": [
+      "**/*.css",
+      "**/*.cts",
+      "**/*.d.ts",
+      "**/*.html",
+      "**/*.json",
+      "**/*.jsonc",
+      "**/*.mjs",
+      "**/*.mts",
+      "**/*.ts",
+      "**/*.tsx",
+    ],
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "recommended": false,
+      "source": {
+        "recommended": false,
+        "noDuplicateClasses": "on", // [HTML,JSX]
+        "organizeImports": "on", // [JavaScript]
+        "useSortedAttributes": "off", // [HTML,JSX] «Disabled because we sort by relevance. For example className appears first, events handlers appear last.»
+        "useSortedInterfaceMembers": "off", // [TypeScript] «Disabled because we sort by relevance. For example a call () signature appears first.»
+        "useSortedKeys": "off", // [JavaScript,JSON] «Disabled because we sort by relevance. For example package.json name/version/type/scripts appear before dependencies.»
+        "useSortedProperties": "off", // [CSS] «Disabled because we sort by relevance. For position/display appear before color/background.»
+      },
+    },
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 120,
+    "trailingNewline": true,
+    "useEditorconfig": false,
+  },
+  "linter": {
+    "enabled": true,
+    "domains": {
+      "project": "none", // WARNING! «Disabled because it is slow as hell.»
+      "react": "all",
+      "test": "all",
+      "types": "none", // WARNING! «Disabled because it is slow as hell.»
+    },
+    "rules": {
+      "recommended": false,
+      // NOTE: If you need to change linter's rules, use the ./biome-linter-rules.jsonc files.
+    },
+  },
+  "css": {
+    "assist": {
+      "enabled": true,
+    },
+    "formatter": {
+      "enabled": true,
+      "quoteStyle": "single",
+    },
+    "linter": {
+      "enabled": true,
+    },
+    "parser": {
+      "cssModules": false,
+      "tailwindDirectives": false,
+    },
+  },
+  "javascript": {
+    "assist": {
+      "enabled": true,
+    },
+    "formatter": {
+      "enabled": true,
+      "arrowParentheses": "asNeeded",
+      "attributePosition": "multiline",
+      "bracketSameLine": false,
+      "bracketSpacing": false,
+      "expand": "auto", // «We don't use 'always' because unfortunately it expands even arrays/objects with only 1 item leading to 3 silly lines when only 1 is enough.»
+      "jsxQuoteStyle": "single",
+      "operatorLinebreak": "before",
+      "quoteProperties": "asNeeded",
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "all",
+    },
+    "linter": {
+      "enabled": true,
+    },
+    "experimentalEmbeddedSnippetsEnabled": true,
+    "globals": [],
+    "jsxRuntime": "transparent",
+  },
+  "json": {
+    "assist": {
+      "enabled": true,
+    },
+    "formatter": {
+      "enabled": true,
+      "bracketSpacing": true,
+      "expand": "always",
+      "trailingCommas": "none",
+    },
+    "linter": {
+      "enabled": true,
+    },
+    "parser": {
+      "allowComments": false,
+      "allowTrailingCommas": false,
+    },
+  },
+  "overrides": [
+    {
+      "includes": [
+        "**/*.jsonc",
+        "**/tsconfig.json",
+        "**/tsconfig.base.json",
+      ],
+      "json": {
+        "formatter": {
+          "trailingCommas": "all",
+        },
+        "parser": {
+          "allowComments": true,
+          "allowTrailingCommas": true,
+        },
+      },
+    },
+  ],
+}

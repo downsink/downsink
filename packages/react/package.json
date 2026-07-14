@@ -1,0 +1,51 @@
+{
+  "name": "@downsink/react",
+  "version": "0.1.0",
+  "description": "React bindings for downsink: a useDownload hook with status, live progress, start and abort.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@downsink/core": "workspace:^"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/downsink/downsink.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://github.com/downsink/downsink#readme",
+  "bugs": "https://github.com/downsink/downsink/issues",
+  "keywords": [
+    "download",
+    "streaming",
+    "opfs",
+    "react",
+    "hook",
+    "progress"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
